@@ -24,3 +24,8 @@ exports.updateMovie = async (movieObj) => {
 		console.log(error)
 	}
 }
+exports.deleteMovie = async (movieObj) => {
+	await Movie.destroy({
+		where: {title: movieObj.title}
+	})
+}

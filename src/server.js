@@ -1,7 +1,7 @@
 const yargs = require('yargs')
 const { sequelize } = require('./db/connection')
 // imports for crud functions
-const { addMovie, listMovies, updateMovie } = require('./movie/movieMethods')
+const { addMovie, listMovies, updateMovie, deleteMovie } = require('./movie/movieMethods')
 
 const app= async (yargsObj) => {
 	try {
@@ -17,6 +17,7 @@ const app= async (yargsObj) => {
 			console.log(await updateMovie(yargsObj),'Sucessfully updated')
 		} else if (yargsObj.delete){
 			// delete a movie
+			await deleteMovie(yargsObj)
 		} else {
 			console.log('incorrect command')
 		}
