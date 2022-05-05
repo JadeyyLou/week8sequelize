@@ -8,7 +8,7 @@ const app= async (yargsObj) => {
 		  await sequelize.sync()
 		if (yargsObj.add){
 			// add movie to db
-			await addMovie({title: yargsObj.title, actor: yargsObj.actor})
+			await addMovie({title: yargsObj.title, actor: yargsObj.actor, rating: yargsObj.rating})
 		} else if (yargsObj.list) {
 			// list all movies
 			console.log(await listMovies())

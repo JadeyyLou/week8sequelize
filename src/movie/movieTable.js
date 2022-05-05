@@ -11,10 +11,11 @@ const Movie = sequelize.define('Movie', {
 		type: DataTypes.STRING,
 		defauleValue: 'Not Specified'
 	},
-	// rating: {
-	// 	type: DataTypes.INTEGER,
-		
-	// }
+	rating: {
+		type: DataTypes.INTEGER,
+		foreignKey: 'title',
+		foreignKey: 'actor'
+	}
 })
 
 module.exports = Movie;
