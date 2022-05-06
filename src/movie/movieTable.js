@@ -9,13 +9,17 @@ const Movie = sequelize.define('Movie', {
 	},
 	actor: {
 		type: DataTypes.STRING,
-		defauleValue: 'Not Specified'
+		defaultValue: 'Not Specified'
 	},
-	rating: {
-		type: DataTypes.INTEGER,
-		foreignKey: 'title',
-		foreignKey: 'actor'
-	}
 })
 
+
+const Rating = sequelize.define('Rating', {
+
+	rating: {
+		type: DataTypes.INTEGER
+		
+	}
+})
+Rating.belongsTo(Movie)
 module.exports = Movie;

@@ -1,13 +1,12 @@
-const { DataTypes } = require('sequelize')
-const { sequelize } = require('../db/connection')
+// const { DataTypes } = require('sequelize')
+// const { sequelize } = require('../db/connection')
 
-const Ratings = sequelize.define('Ratings', {
+// const Rating = sequelize.define('Rating', {
 
-	rating: {
-		type: DataTypes.INTEGER,
-		foreignKey: 'title',
-		foreignKey: 'actor'
-	}
-})
+// 	rating: {
+// 		type: DataTypes.INTEGER
+// 		rating.belongs
+// 	}
+// })
 
-module.exports = Ratings;
+// module.exports = Rating;
